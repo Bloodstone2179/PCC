@@ -1,0 +1,34 @@
+SUBROUTINE:void(iAmInt:int, iAmInt_2:int, hello:string) testing THEN
+OUTPUT "Hello From testing SUBROUTINE"
+OUTPUT iAmInt + iAmInt_2
+OUTPUT hello
+END testing
+
+#test
+SUBROUTINE:void helloWorld THEN
+OUTPUT "Hello World"
+END helloWorld
+
+
+SUBROUTINE:string onePointThreeTwo THEN
+OUTPUT "Hello World"
+RETURN "a"
+END helloWorld
+
+SUBROUTINE:float(hi:string ) onePointThreeTwo_2 THEN
+OUTPUT hi
+RETURN 1.33
+END helloWorld
+
+
+SUBROUTINE:int main THEN
+OUTPUT "Hello From Main SUBROUTINE"
+INVOKE testing(213, 1732672872,"umm")
+INVOKE helloWorld
+helloWorldVar:float <-- 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
+OUTPUT  helloWorldVar
+onePointThreeTwo_var:float <-- INVOKE onePointThreeTwo_2("wagwan")
+OUTPUT onePointThreeTwo_var
+END main
+
+

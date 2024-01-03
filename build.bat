@@ -1,0 +1,2 @@
+@echo off
+pyinstaller --noconfirm --onedir --console --name "pcc" --add-data "D:/Docs/Code/Code-Projects/AQA PseudoCode transpiler/compiler.py;." --add-data "D:/Docs/Code/Code-Projects/AQA PseudoCode transpiler/gcc.exe;."  "D:/Docs/Code/Code-Projects/AQA PseudoCode transpiler/main.py"
