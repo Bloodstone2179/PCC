@@ -1,0 +1,50 @@
+#SUBROUTINE:void(iAmInt:int, iAmInt_2:int, hello:string) testing THEN
+#OUTPUT "Hello From testing SUBROUTINE"
+#OUTPUT iAmInt + iAmInt_2
+#OUTPUT hello
+#END testing
+
+#test
+#SUBROUTINE:void helloWorld THEN
+#OUTPUT "Hello World"
+#END helloWorld
+
+
+#SUBROUTINE:string onePointThreeTwo THEN
+#OUTPUT "Hello World"
+#RETURN "a"
+#END helloWorld
+
+#SUBROUTINE:float(hi:string ) onePointThreeTwo_2 THEN
+#RETURN 1.33
+#END helloWorld
+
+
+SUBROUTINE:void pass THEN
+OUTPUT "Enter Username: "
+a:string <-- USERINPUT
+
+IF a != "" THEN
+IF a == "james" THEN
+OUTPUT "JAMES - Authenticated"
+ELSEIF a == "jane"
+OUTPUT "JANE - Authenticated"
+ELSE
+OUTPUT "USERNAME Not Accepted"
+INVOKE pass
+ENDIF
+ELSE
+OUTPUT "Please Enter A Username"
+INVOKE pass
+ENDIF
+END
+
+SUBROUTINE:int main THEN
+INVOKE pass
+testString:string[] <-- INVOKE internalFunctions.hello()
+OUTPUT testString[0] + " " + testString[1]
+testString.push_back("hello_2")
+OUTPUT testString[0] + " " + testString[1] + " " + testString[2]
+END main
+
+
