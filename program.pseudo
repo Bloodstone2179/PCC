@@ -41,9 +41,11 @@ END
 
 SUBROUTINE:int main THEN
 INVOKE pass
-testString:string[] <-- INVOKE internalFunctions.hello()
+testString:string[] <-- INVOKE testFunction_stdVecOfStrings()
+s:int <-- INVOKE GetStringLen("hello World")
+OUTPUT s
 OUTPUT testString[0] + " " + testString[1]
-testString.push_back("hello_2")
+INVOKE AppendArray(testString, "hello_2")
 OUTPUT testString[0] + " " + testString[1] + " " + testString[2]
 END main
 

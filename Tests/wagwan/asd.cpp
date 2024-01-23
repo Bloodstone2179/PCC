@@ -1,8 +1,8 @@
 #include <iostream>
-#include "builtins.h"
+#include "D:\Docs\Code\Code-Projects\AQA PseudoCode transpiler/myStd.h"
 using namespace std;
-using namespace builtinsNS;
-builtinsNS::builtinCL builtin;
+using namespace builtins;
+builtins::builtin internalFunctions;
 
 void pass() {
 std::cout << "Enter Username: " << std::endl;
@@ -27,10 +27,8 @@ pass();
 }
 int main() {
 pass();
-std::vector<std::string> testString = builtin.testFunction_stdVecOfStrings();
-int s = builtin.GetStringLen("hello World");
-std::cout << s << std::endl;
+std::vector<std::string> testString = internalFunctions.hello();
 std::cout << testString[0] + " " + testString[1] << std::endl;
-builtin.AppendArray(testString, "hello_2");
+testString.push_back("hello_2");
 std::cout << testString[0] + " " + testString[1] + " " + testString[2] << std::endl;
 }

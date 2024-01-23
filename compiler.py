@@ -1,17 +1,19 @@
-import os,subprocess,time
+import os,subprocess,time, termcolor,shutil
 
 class Compiler:
     InputFile_PseudoCode_Lines = []
-    includes = f'#include <iostream>\n#include "{os.getcwd()}/myStd.h"'
-    C_Code = f"{includes}\nusing namespace std;\nusing namespace builtins;\nbuiltins::builtin internalFunctions;\n\n"
+    includes = f'#include <iostream>\n#include "builtins.h"'
+    C_Code = f"{includes}\nusing namespace std;\nusing namespace builtinsNS;\nbuiltinsNS::builtinCL builtin;\n\n"
     #             0           1        2       3         4           5        6     7      8        9       10       11
     types = ["SUBROUTINE", "OUTPUT", "END", "INVOKE", "RETURN", "USERINPUT", "IF","ELSE","FOR", "ENDIF", "WHILE", "ELSEIF"]
     variable_types = ["string", "int","float","double", "[]"]
+    builtinFunctions = ["GetStringLen", "testFunction_stdVecOfStrings", "AppendArray"]
     vartypes_cpp = ["std::string", "int", "double", "char","std::vector"]
     functions = []
     variables = []
+    types_of_variable_in_the_cpp = []
     outType = "exe"
-    
+    currentFuncName = None
     def __init__(self, input_file: str = "program.psuedo", output_directory: str = "./output/", name: str = "Application", outType: str = "exe"):
         self.input_file = input_file
         self.output_directory = output_directory
@@ -48,6 +50,7 @@ class Compiler:
                         SubRoutineType = lineIn_inFile.removeprefix("SUBROUTINE:").split("(")[0]
                         subName_base = lineIn_inFile.removeprefix("SUBROUTINE:").split(" ")
                         subName = subName_base[len(subName_base) - 2]
+                        self.currentFuncName = subName
                         subArgs = lineIn_inFile.removeprefix("SUBROUTINE:" + SubRoutineType).removeprefix("(").replace(")", "").replace(subName + " THEN", "").split(",")
                         parameters = ""
                         for i in subArgs:
@@ -77,6 +80,7 @@ class Compiler:
                         SubRoutineType = lineIn_inFile.removeprefix("SUBROUTINE:").split(" ")[0]
                         subName_base = lineIn_inFile.removeprefix("SUBROUTINE:").split(" ")
                         subName = subName_base[len(subName_base) - 2]
+                        self.currentFuncName = subName
                         self.C_Code += SubRoutineType + " " + subName + "() {\n"
                         func = {"name" : subName,"type": SubRoutineType, "args" : None}
                         self.functions.append(func)
@@ -89,7 +93,11 @@ class Compiler:
                     self.C_Code += "}\n"    
                 elif self.types[3] in first_split[0] : # checking if invoke (calls subroutine)
                     if "(" in first_split[1].removesuffix("\n"):
-                        self.C_Code += f"{first_split[1].removesuffix("\n")};\n"
+                        print(first_split[1].split("(")[0])
+                        if first_split[1].split("(")[0] in self.builtinFunctions:
+                            self.C_Code += f"builtin.{first_split[1].removesuffix("\n")};\n"
+                        else:
+                            self.C_Code += f"{first_split[1].removesuffix("\n")};\n"
                     else:
                         self.C_Code += f"{first_split[1].removesuffix("\n")}();\n"
                 elif self.types[4] in first_split[0]: # RETURN
@@ -107,7 +115,7 @@ class Compiler:
                         cont = f"({aa.replace("AND", "&&").replace("OR", "||")})"
                         else_type = "else"
                     self.C_Code += "}\n" + f'{else_type} {cont}' + "{\n"
-                elif self.types[11] == first_split[0]:
+                elif self.types[11] == first_split[0]: # ElseIf
                     print("elif")
                     aa = first_split[-1].removesuffix("\n")
                     cont = f"({aa.replace("AND", "&&").replace("OR", "||")})"
@@ -123,7 +131,10 @@ class Compiler:
                         cpp_equiv = self.vartypes_cpp[typeIndex]
                     if "INVOKE" in varContent.split(maxsplit=1)[0] and "[" not in varType:
                         if "(" in varContent.split(maxsplit=1)[1]:
-                            varContent = f"{varContent.split(maxsplit=1)[1]}"
+                            if varContent.split(maxsplit=1)[1].split("(")[0] in self.builtinFunctions:
+                                varContent = f"builtin.{varContent.split(maxsplit=1)[1]}"
+                            else:
+                                varContent = f"builtin.{varContent.split(maxsplit=1)[1]}"
                         else:
                             varContent= f"{varContent.split(maxsplit=1)[1]}()"
                         
@@ -133,7 +144,10 @@ class Compiler:
                         if "[" in varContent.split(maxsplit=1)[0]:
                             self.C_Code += f"std::vector<{cpp_equiv}> {varName} = " + "{"+ f"{varContent.split(maxsplit=1)[0].replace("[","").replace("]","")}" +"}"+ ";\n"
                         elif "INVOKE" in varContent.split(maxsplit=1)[0]:
-                            self.C_Code += f"std::vector<{cpp_equiv}> {varName} = {varContent.split(maxsplit=1)[1]};\n"
+                            if varContent.split(maxsplit=1)[1].split("(")[0] in self.builtinFunctions:
+                                self.C_Code += f"std::vector<{cpp_equiv}> {varName} = builtin.{varContent.split(maxsplit=1)[1]};\n"
+                            else:
+                                self.C_Code += f"std::vector<{cpp_equiv}> {varName} = {varContent.split(maxsplit=1)[1]};\n"
                         else:
                             self.C_Code += f"std::vector<{cpp_equiv}> {varName};\n"
                    
@@ -160,5 +174,7 @@ class Compiler:
         self.readFile()
         self.StartMakingC_Code()
         self.writeToFile()
+        shutil.copyfile("builtins.h", self.output_directory + "/builtins.h")
+        subprocess.run(f"g++ {self.output_directory}\\{self.name}.cpp -o {self.output_directory}\\{self.name}.{self.outType}", shell=True)
+        termcolor.cprint("<-------------------- BUILT EXE -------------------->","blue")
         print(f"TIME TO RUN {time.time() - s} seconds")
-        subprocess.Popen(f"g++ {self.output_directory}\\{self.name}.cpp -o {self.output_directory}\\{self.name}.{self.outType}", shell=True)

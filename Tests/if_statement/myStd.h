@@ -8,5 +8,9 @@ namespace builtins {
                 std::vector<std::string> hi = {"Hello", "world"};
                 return hi;
             }
+            int GetStringLen(std::string input){
+                int len = input.length();
+                return len;
+            }
     };
 }

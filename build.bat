@@ -1,2 +1,7 @@
 @echo off
-pyinstaller --noconfirm --onedir --console --name "pcc" --add-data "D:/Docs/Code/Code-Projects/AQA PseudoCode transpiler/compiler.py;." --add-data "D:/Docs/Code/Code-Projects/AQA PseudoCode transpiler/gcc.exe;."  "D:/Docs/Code/Code-Projects/AQA PseudoCode transpiler/main.py"
+set /p "Output=Enter Output Directory: "
+set /p "Input=Enter Input File: "
+set /p "projName=Enter Project Name: "
+python .\main.py -f %Input% -d %Output% -n %projName%
+.\%Output%%projName%.exe
+cd  Tests

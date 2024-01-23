@@ -1,0 +1,3 @@
+SUBROUTINE:int main THEN
+OUTPUT "Hello World"
+END main
