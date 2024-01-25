@@ -7,7 +7,7 @@ class Compiler:
     #             0           1        2       3         4           5        6     7      8        9       10       11
     types = ["SUBROUTINE", "OUTPUT", "END", "INVOKE", "RETURN", "USERINPUT", "IF","ELSE","FOR", "ENDIF", "WHILE", "ELSEIF"]
     variable_types = ["string", "int","float","double", "[]"]
-    builtinFunctions = ["GetStringLen", "testFunction_stdVecOfStrings", "AppendArray"]
+    builtinFunctions = ["GetStringLen", "testFunction_stdVecOfStrings"]
     vartypes_cpp = ["std::string", "int", "double", "char","std::vector"]
     functions = []
     variables = []
@@ -85,7 +85,7 @@ class Compiler:
                         func = {"name" : subName,"type": SubRoutineType, "args" : None}
                         self.functions.append(func)
                 elif self.types[1] in first_split[0] : # CHECKING TO SEE IF WE SHOULD OUTPUT
-                    self.C_Code += f"std::cout << {first_split[1].removesuffix("\n")} << std::endl;\n"                  
+                    self.C_Code += f"std::cout << {first_split[1].removesuffix('\n')} << std::endl;\n"                  
                 elif self.types[2] == first_split[0]: # checking for the end statement
                     self.C_Code += "}\n"
                 elif self.types[9] in first_split[0]: # endif
