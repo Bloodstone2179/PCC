@@ -3,7 +3,7 @@ import os,subprocess,time, termcolor,shutil
 class Compiler:
     InputFile_PseudoCode_Lines = []
     includes = f'#include <iostream>\n#include "builtins.h"'
-    C_Code = f"{includes}\nusing namespace std;\nusing namespace builtinsNS;\nbuiltinsNS::builtinCL builtin;\n\n"
+    C_Code = f"{includes}\nusing namespace std;\nusing namespace builtin;\n"
     #             0           1        2       3         4           5        6     7      8        9       10       11
     types = ["SUBROUTINE", "OUTPUT", "END", "INVOKE", "RETURN", "USERINPUT", "IF","ELSE","FOR", "ENDIF", "WHILE", "ELSEIF"]
     variable_types = ["string", "int","float","double", "[]"]
@@ -95,7 +95,7 @@ class Compiler:
                     if "(" in first_split[1].removesuffix("\n"):
                         print(first_split[1].split("(")[0])
                         if first_split[1].split("(")[0] in self.builtinFunctions:
-                            self.C_Code += f"builtin.{first_split[1].removesuffix("\n")};\n"
+                            self.C_Code += f"{first_split[1].removesuffix("\n")};\n"
                         else:
                             self.C_Code += f"{first_split[1].removesuffix("\n")};\n"
                     else:
@@ -132,9 +132,9 @@ class Compiler:
                     if "INVOKE" in varContent.split(maxsplit=1)[0] and "[" not in varType:
                         if "(" in varContent.split(maxsplit=1)[1]:
                             if varContent.split(maxsplit=1)[1].split("(")[0] in self.builtinFunctions:
-                                varContent = f"builtin.{varContent.split(maxsplit=1)[1]}"
+                                varContent = f"{varContent.split(maxsplit=1)[1]}"
                             else:
-                                varContent = f"builtin.{varContent.split(maxsplit=1)[1]}"
+                                varContent = f"{varContent.split(maxsplit=1)[1]}"
                         else:
                             varContent= f"{varContent.split(maxsplit=1)[1]}()"
                         
@@ -145,7 +145,7 @@ class Compiler:
                             self.C_Code += f"std::vector<{cpp_equiv}> {varName} = " + "{"+ f"{varContent.split(maxsplit=1)[0].replace("[","").replace("]","")}" +"}"+ ";\n"
                         elif "INVOKE" in varContent.split(maxsplit=1)[0]:
                             if varContent.split(maxsplit=1)[1].split("(")[0] in self.builtinFunctions:
-                                self.C_Code += f"std::vector<{cpp_equiv}> {varName} = builtin.{varContent.split(maxsplit=1)[1]};\n"
+                                self.C_Code += f"std::vector<{cpp_equiv}> {varName} = {varContent.split(maxsplit=1)[1]};\n"
                             else:
                                 self.C_Code += f"std::vector<{cpp_equiv}> {varName} = {varContent.split(maxsplit=1)[1]};\n"
                         else:

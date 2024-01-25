@@ -1,0 +1,3 @@
+ - create a header file with the same name as the file they want to import
+ - create a namespace which is the name of the file with _ added to the end
+ - include the file and use the namespace 
