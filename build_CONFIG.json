@@ -7,7 +7,7 @@
   },
   {
    "optionDest": "filenames",
-   "value": "D:/Docs/Code/Code-Projects/AQA PseudoCode transpiler/main.py"
+   "value": "D:/Docs/Code/Code-Projects/AQA PseudoCode transpiler/SRC/main.py"
   },
   {
    "optionDest": "onefile",
@@ -55,11 +55,7 @@
   },
   {
    "optionDest": "datas",
-   "value": "D:/Docs/Code/Code-Projects/AQA PseudoCode transpiler/compiler.py;."
-  },
-  {
-   "optionDest": "datas",
-   "value": "D:/Docs/Code/Code-Projects/AQA PseudoCode transpiler/gcc.exe;."
+   "value": "D:/Docs/Code/Code-Projects/AQA PseudoCode transpiler/SRC/compiler.py;."
   }
  ],
  "nonPyinstallerOptions": {
