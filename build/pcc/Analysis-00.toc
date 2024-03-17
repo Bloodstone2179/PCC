@@ -1,5 +1,7 @@
-(['D:\\Docs\\Code\\Code-Projects\\AQA PseudoCode transpiler\\SRC\\main.py'],
- ['D:\\Docs\\Code\\Code-Projects\\AQA PseudoCode transpiler\\SRC'],
+(['D:\\Docs\\Code\\Code-Projects\\AQA Pseudo Code Project\\AQA PseudoCode '
+  'transpiler\\SRC\\main.py'],
+ ['D:\\Docs\\Code\\Code-Projects\\AQA Pseudo Code Project\\AQA PseudoCode '
+  'transpiler\\SRC'],
  [],
  ['D:\\Apps\\Python\\Lib\\site-packages\\numpy\\_pyinstaller',
   'D:\\Apps\\Python\\Lib\\site-packages\\pygame\\__pyinstaller',
@@ -17,7 +19,8 @@
  {},
  [],
  [('compiler.py',
-   'D:\\Docs\\Code\\Code-Projects\\AQA PseudoCode transpiler\\SRC\\compiler.py',
+   'D:\\Docs\\Code\\Code-Projects\\AQA Pseudo Code Project\\AQA PseudoCode '
+   'transpiler\\SRC\\compiler.py',
    'DATA')],
  '3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit '
  '(AMD64)]',
@@ -25,7 +28,8 @@
    'D:\\Apps\\Python\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
    'PYSOURCE'),
   ('main',
-   'D:\\Docs\\Code\\Code-Projects\\AQA PseudoCode transpiler\\SRC\\main.py',
+   'D:\\Docs\\Code\\Code-Projects\\AQA Pseudo Code Project\\AQA PseudoCode '
+   'transpiler\\SRC\\main.py',
    'PYSOURCE')],
  [('inspect', 'D:\\Apps\\Python\\Lib\\inspect.py', 'PYMODULE'),
   ('importlib', 'D:\\Apps\\Python\\Lib\\importlib\\__init__.py', 'PYMODULE'),
@@ -78,6 +82,13 @@
    'PYMODULE'),
   ('string', 'D:\\Apps\\Python\\Lib\\string.py', 'PYMODULE'),
   ('bisect', 'D:\\Apps\\Python\\Lib\\bisect.py', 'PYMODULE'),
+  ('shutil', 'D:\\Apps\\Python\\Lib\\shutil.py', 'PYMODULE'),
+  ('tarfile', 'D:\\Apps\\Python\\Lib\\tarfile.py', 'PYMODULE'),
+  ('gzip', 'D:\\Apps\\Python\\Lib\\gzip.py', 'PYMODULE'),
+  ('_compression', 'D:\\Apps\\Python\\Lib\\_compression.py', 'PYMODULE'),
+  ('lzma', 'D:\\Apps\\Python\\Lib\\lzma.py', 'PYMODULE'),
+  ('bz2', 'D:\\Apps\\Python\\Lib\\bz2.py', 'PYMODULE'),
+  ('fnmatch', 'D:\\Apps\\Python\\Lib\\fnmatch.py', 'PYMODULE'),
   ('importlib._abc', 'D:\\Apps\\Python\\Lib\\importlib\\_abc.py', 'PYMODULE'),
   ('importlib.metadata._itertools',
    'D:\\Apps\\Python\\Lib\\importlib\\metadata\\_itertools.py',
@@ -152,12 +163,8 @@
    'D:\\Apps\\Python\\Lib\\zipfile\\_path\\glob.py',
    'PYMODULE'),
   ('py_compile', 'D:\\Apps\\Python\\Lib\\py_compile.py', 'PYMODULE'),
-  ('lzma', 'D:\\Apps\\Python\\Lib\\lzma.py', 'PYMODULE'),
-  ('_compression', 'D:\\Apps\\Python\\Lib\\_compression.py', 'PYMODULE'),
-  ('bz2', 'D:\\Apps\\Python\\Lib\\bz2.py', 'PYMODULE'),
   ('importlib.util', 'D:\\Apps\\Python\\Lib\\importlib\\util.py', 'PYMODULE'),
   ('pathlib', 'D:\\Apps\\Python\\Lib\\pathlib.py', 'PYMODULE'),
-  ('fnmatch', 'D:\\Apps\\Python\\Lib\\fnmatch.py', 'PYMODULE'),
   ('email', 'D:\\Apps\\Python\\Lib\\email\\__init__.py', 'PYMODULE'),
   ('email.parser', 'D:\\Apps\\Python\\Lib\\email\\parser.py', 'PYMODULE'),
   ('email.feedparser',
@@ -184,17 +191,15 @@
   ('dis', 'D:\\Apps\\Python\\Lib\\dis.py', 'PYMODULE'),
   ('opcode', 'D:\\Apps\\Python\\Lib\\opcode.py', 'PYMODULE'),
   ('ast', 'D:\\Apps\\Python\\Lib\\ast.py', 'PYMODULE'),
+  ('stringprep', 'D:\\Apps\\Python\\Lib\\stringprep.py', 'PYMODULE'),
   ('tracemalloc', 'D:\\Apps\\Python\\Lib\\tracemalloc.py', 'PYMODULE'),
   ('_py_abc', 'D:\\Apps\\Python\\Lib\\_py_abc.py', 'PYMODULE'),
-  ('stringprep', 'D:\\Apps\\Python\\Lib\\stringprep.py', 'PYMODULE'),
-  ('shutil', 'D:\\Apps\\Python\\Lib\\shutil.py', 'PYMODULE'),
-  ('tarfile', 'D:\\Apps\\Python\\Lib\\tarfile.py', 'PYMODULE'),
-  ('gzip', 'D:\\Apps\\Python\\Lib\\gzip.py', 'PYMODULE'),
   ('subprocess', 'D:\\Apps\\Python\\Lib\\subprocess.py', 'PYMODULE'),
   ('signal', 'D:\\Apps\\Python\\Lib\\signal.py', 'PYMODULE'),
   ('argparse', 'D:\\Apps\\Python\\Lib\\argparse.py', 'PYMODULE'),
   ('compiler',
-   'D:\\Docs\\Code\\Code-Projects\\AQA PseudoCode transpiler\\SRC\\compiler.py',
+   'D:\\Docs\\Code\\Code-Projects\\AQA Pseudo Code Project\\AQA PseudoCode '
+   'transpiler\\SRC\\compiler.py',
    'PYMODULE'),
   ('termcolor',
    'D:\\Apps\\Python\\Lib\\site-packages\\termcolor\\__init__.py',
@@ -206,59 +211,59 @@
  [('python312.dll', 'D:\\Apps\\Python\\python312.dll', 'BINARY'),
   ('_decimal.pyd', 'D:\\Apps\\Python\\DLLs\\_decimal.pyd', 'EXTENSION'),
   ('_hashlib.pyd', 'D:\\Apps\\Python\\DLLs\\_hashlib.pyd', 'EXTENSION'),
+  ('_lzma.pyd', 'D:\\Apps\\Python\\DLLs\\_lzma.pyd', 'EXTENSION'),
+  ('_bz2.pyd', 'D:\\Apps\\Python\\DLLs\\_bz2.pyd', 'EXTENSION'),
   ('unicodedata.pyd', 'D:\\Apps\\Python\\DLLs\\unicodedata.pyd', 'EXTENSION'),
   ('select.pyd', 'D:\\Apps\\Python\\DLLs\\select.pyd', 'EXTENSION'),
   ('_socket.pyd', 'D:\\Apps\\Python\\DLLs\\_socket.pyd', 'EXTENSION'),
-  ('_lzma.pyd', 'D:\\Apps\\Python\\DLLs\\_lzma.pyd', 'EXTENSION'),
-  ('_bz2.pyd', 'D:\\Apps\\Python\\DLLs\\_bz2.pyd', 'EXTENSION'),
-  ('api-ms-win-crt-time-l1-1-0.dll',
+  ('api-ms-win-crt-stdio-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-time-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-stdio-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-crt-math-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-math-l1-1-0.dll',
    'BINARY'),
+  ('api-ms-win-crt-string-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-string-l1-1-0.dll',
+   'BINARY'),
+  ('VCRUNTIME140.dll', 'D:\\Apps\\Python\\VCRUNTIME140.dll', 'BINARY'),
   ('api-ms-win-crt-conio-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-conio-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-crt-stdio-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-stdio-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-crt-runtime-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-runtime-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-crt-process-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-process-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-crt-heap-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-heap-l1-1-0.dll',
    'BINARY'),
-  ('VCRUNTIME140.dll', 'D:\\Apps\\Python\\VCRUNTIME140.dll', 'BINARY'),
-  ('api-ms-win-crt-string-l1-1-0.dll',
+  ('api-ms-win-crt-runtime-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-string-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-runtime-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-crt-environment-l1-1-0.dll',
+  ('api-ms-win-crt-time-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-environment-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-time-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-crt-convert-l1-1-0.dll',
+  ('api-ms-win-crt-locale-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-convert-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-locale-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-crt-filesystem-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-filesystem-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-crt-locale-l1-1-0.dll',
+  ('api-ms-win-crt-convert-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-locale-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-convert-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-environment-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-environment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-process-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-process-l1-1-0.dll',
    'BINARY'),
   ('libcrypto-3.dll', 'D:\\Apps\\Python\\DLLs\\libcrypto-3.dll', 'BINARY'),
   ('ucrtbase.dll',
@@ -269,37 +274,17 @@
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-utility-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-synch-l1-1-0.dll',
+  ('api-ms-win-core-file-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-synch-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-file-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-string-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-string-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-core-sysinfo-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-sysinfo-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-datetime-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-datetime-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-memory-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-memory-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-processenvironment-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-processenvironment-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-profile-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-profile-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-timezone-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-timezone-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-file-l2-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-file-l2-1-0.dll',
    'BINARY'),
   ('api-ms-win-core-file-l1-2-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
@@ -309,17 +294,33 @@
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-errorhandling-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-processthreads-l1-1-1.dll',
+  ('api-ms-win-core-namedpipe-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-processthreads-l1-1-1.dll',
+   'Toolkit\\api-ms-win-core-namedpipe-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-heap-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processenvironment-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-processenvironment-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-core-console-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-console-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-debug-l1-1-0.dll',
+  ('api-ms-win-core-file-l2-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-debug-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-file-l2-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-2-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-synch-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-handle-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-handle-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-core-localization-l1-2-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
@@ -329,52 +330,57 @@
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-rtlsupport-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-libraryloader-l1-1-0.dll',
+  ('api-ms-win-core-datetime-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-libraryloader-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-datetime-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-core-processthreads-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-processthreads-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-file-l1-1-0.dll',
+  ('api-ms-win-core-processthreads-l1-1-1.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-file-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-processthreads-l1-1-1.dll',
    'BINARY'),
-  ('api-ms-win-core-synch-l1-2-0.dll',
+  ('api-ms-win-core-debug-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-synch-l1-2-0.dll',
+   'Toolkit\\api-ms-win-core-debug-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-synch-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-profile-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-profile-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-core-interlocked-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-interlocked-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-string-l1-1-0.dll',
+  ('api-ms-win-core-libraryloader-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-string-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-libraryloader-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-handle-l1-1-0.dll',
+  ('api-ms-win-core-memory-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-handle-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-memory-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-heap-l1-1-0.dll',
+  ('api-ms-win-core-timezone-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-heap-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-timezone-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-core-util-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-util-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-namedpipe-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-namedpipe-l1-1-0.dll',
    'BINARY')],
  [],
  [],
  [('compiler.py',
-   'D:\\Docs\\Code\\Code-Projects\\AQA PseudoCode transpiler\\SRC\\compiler.py',
+   'D:\\Docs\\Code\\Code-Projects\\AQA Pseudo Code Project\\AQA PseudoCode '
+   'transpiler\\SRC\\compiler.py',
    'DATA'),
   ('base_library.zip',
-   'D:\\Docs\\Code\\Code-Projects\\AQA PseudoCode '
+   'D:\\Docs\\Code\\Code-Projects\\AQA Pseudo Code Project\\AQA PseudoCode '
    'transpiler\\build\\pcc\\base_library.zip',
    'DATA')])

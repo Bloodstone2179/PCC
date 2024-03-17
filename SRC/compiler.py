@@ -1,5 +1,8 @@
-import os,subprocess,time, termcolor,shutil
-
+import os,subprocess,time, termcolor,shutil, sys
+def getResourcePath():
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
+    return base_path
 class Compiler:
     InputFile_PseudoCode_Lines = []
     includes = f'#include <iostream>\n#include "builtins.h"'
@@ -14,11 +17,12 @@ class Compiler:
     types_of_variable_in_the_cpp = []
     outType = "exe"
     currentFuncName = None
-    def __init__(self, input_file: str = "program.psuedo", output_directory: str = "./output/", name: str = "Application", outType: str = "exe"):
+    def __init__(self, input_file: str = "program.psuedo", output_directory: str = "./output/", name: str = "Application", outType: str = "exe", testing: bool = False):
         self.input_file = input_file
         self.output_directory = output_directory
         self.name = name
         self.outType = outType
+        self.test = testing
     def readFile(self):
         with open(f"{os.getcwd()}/{self.input_file}", "r") as f:
             self.InputFile_PseudoCode_Lines = f.readlines()
@@ -174,7 +178,9 @@ class Compiler:
         self.readFile()
         self.StartMakingC_Code()
         self.writeToFile()
-        shutil.copyfile("builtins.h", self.output_directory + "/builtins.h")
-        subprocess.run(f"g++ {self.output_directory}\\{self.name}.cpp -o {self.output_directory}\\{self.name}.{self.outType}", shell=True)
+        installLoc = getResourcePath()
+        if self.test == True:
+            installLoc = "D:/Apps/PCC"
+        subprocess.run(f"{installLoc}\\g++_install\\mingw64\\bin\\g++ {self.output_directory}\\{self.name}.cpp -o {self.output_directory}\\{self.name}.{self.outType}", shell=True)
         termcolor.cprint("<-------------------- BUILT EXE -------------------->","blue")
         print(f"TIME TO RUN {time.time() - s} seconds")

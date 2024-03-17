@@ -1,4 +1,4 @@
-('D:\\Docs\\Code\\Code-Projects\\AQA PseudoCode '
+('D:\\Docs\\Code\\Code-Projects\\AQA Pseudo Code Project\\AQA PseudoCode '
  'transpiler\\build\\pcc\\PYZ-00.pyz',
  [('__future__', 'D:\\Apps\\Python\\Lib\\__future__.py', 'PYMODULE'),
   ('_compat_pickle', 'D:\\Apps\\Python\\Lib\\_compat_pickle.py', 'PYMODULE'),
@@ -17,7 +17,8 @@
   ('bz2', 'D:\\Apps\\Python\\Lib\\bz2.py', 'PYMODULE'),
   ('calendar', 'D:\\Apps\\Python\\Lib\\calendar.py', 'PYMODULE'),
   ('compiler',
-   'D:\\Docs\\Code\\Code-Projects\\AQA PseudoCode transpiler\\SRC\\compiler.py',
+   'D:\\Docs\\Code\\Code-Projects\\AQA Pseudo Code Project\\AQA PseudoCode '
+   'transpiler\\SRC\\compiler.py',
    'PYMODULE'),
   ('contextlib', 'D:\\Apps\\Python\\Lib\\contextlib.py', 'PYMODULE'),
   ('contextvars', 'D:\\Apps\\Python\\Lib\\contextvars.py', 'PYMODULE'),

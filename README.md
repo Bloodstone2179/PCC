@@ -5,8 +5,11 @@ Windows only at the moment
     python
 
 ## How To Use
-    - Download PCC.exe from releases
-    - Install G++ 
+    - Download the installer from releases
+    - Run The installer In A Command Line
+    - Enter The Install Directory ie "D:/Apps/PCC"
+        this will install PCC and G++
+    - add the directory you installed to into the systems path 
     - Create a pseudocode file (check next section)
     - from the Terminal run the pcc -f [name of pseudocode file ] -d [output directory] -n [name for the compiled exe]
 
