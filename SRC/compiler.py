@@ -6,7 +6,7 @@ def getResourcePath():
 class Compiler:
     InputFile_PseudoCode_Lines = []
     includes = f'#include <iostream>\n#include "builtins.h"'
-    C_Code = f"{includes}\nusing namespace std;\nusing namespace builtin;\n"
+    C_Code = f"{includes}\nusing namespace std;\nusing namespace builtin;\nusing namespace Maths;\n"
     #             0           1        2       3         4           5        6     7      8        9       10       11
     types = ["SUBROUTINE", "OUTPUT", "END", "INVOKE", "RETURN", "USERINPUT", "IF","ELSE","FOR", "ENDIF", "WHILE", "ELSEIF"]
     variable_types = ["string", "int","float","double", "[]"]
