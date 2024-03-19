@@ -1,5 +1,5 @@
 from compiler import Compiler
-import argparse, os, sys
+import argparse, os, sys, json
 usage_c = "(Compiling ) "
 usage_g = "(Generation) "
 rootDir = os.getcwd()
@@ -12,7 +12,7 @@ parser.add_argument("-n", "--project_name", help=f"{usage_c}name of the project"
 parser.add_argument("-r", "--run", help=f"{usage_c}run the exe straight away after its been built", type=bool, required=False, default=False, action=argparse.BooleanOptionalAction)
 parser.add_argument("-v", "--version", help=f"Version Of PCC",required=False, type=bool,action=argparse.BooleanOptionalAction)
 includeFiles = ["builtins.h"]
-version_ = "v1.0.0.9-dev"
+version_ = json.loads(open("v.json").read())["LatestReleaseVersion"]
 args = parser.parse_args()
 if args.version is not None:
     print(f"Current Version: {version_}")

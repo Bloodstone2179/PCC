@@ -2,7 +2,7 @@ import os,subprocess,time, termcolor,shutil, sys
 def getResourcePath():
     """ Get absolute path to resource, works for dev and for PyInstaller """
     base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
-    return base_path
+    return base_path 
 class Compiler:
     InputFile_PseudoCode_Lines = []
     includes = f'#include <iostream>\n#include "builtins.h"'
