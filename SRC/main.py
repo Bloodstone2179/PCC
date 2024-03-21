@@ -1,4 +1,4 @@
-from compiler import Compiler
+from compiler import Compiler_PC_CPP, FileImp
 import argparse, os, sys, json
 usage_c = "(Compiling ) "
 usage_g = "(Generation) "
@@ -17,7 +17,9 @@ if args.gen == True and args.file is not None:
     print("cant use gen and file if you want to generate a project please use the -g True command")
 
 if args.gen == False and args.file is not None:
-    Compiler(args.file, args.output_dir, args.project_name, testing=True).Compile()
+    #TODO send file through a parser that will find imports and then will find them and convert them to C++ code thats added to the main file but is namespaced with the name of then other files (these are added 1st)
+    
+    Compiler_PC_CPP(args.file, args.output_dir, args.project_name, testing=True).Compile()
     #os.chdir(rootDir + "\\" + args.output_dir.replace("/", "\\"))
 if args.gen == True:
     ps = 'SUBROUTINE:int main THEN\nOUTPUT "Hello World"\nEND main'

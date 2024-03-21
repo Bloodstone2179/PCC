@@ -1,6 +1,9 @@
 #include <iostream>
 #include <vector>
 #include <math.h>
+#include <fstream>
+#include <string>
+using namespace std;
 namespace builtin {
     
     std::vector<std::string> testFunction_stdVecOfStrings(){
@@ -21,11 +24,71 @@ namespace builtin {
     void AppendArray(std::vector<double> &arr, double Data){
         arr.push_back(Data);
     }
-    // TODO: 
-    // - Create Math Library Extensions
+    // TODO: Add Multiple File Inputs
     // 
     
     
+}
+namespace FileIO {
+    std::string ReadFile(std::string FileName){
+        string line;
+        string out;
+        fstream File(FileName);
+        if (File.is_open())
+        {
+            while ( getline (File,line) )
+            {
+            cout << line << '\n';
+            out += line;
+            }
+            File.close();
+            return out;
+        }
+
+        else {
+            cout << "Unable to open file";
+            return "Failed To Read File";
+        } 
+        
+    }
+    std::vector<std::string> ReadFileLines(std::string fileName){
+        std::vector<std::string> Lines = {};
+        string line,out;
+        fstream File(fileName.c_str());
+        if (File.is_open())
+        {
+            while ( getline (File,line) )
+            {
+            cout << line << '\n';
+            builtin::AppendArray(Lines, line);
+            }
+            File.close();
+            return Lines;
+        }
+
+        else {
+            cout << "Unable to open file" << std::endl;
+            cout << Lines.size() << std::endl;
+            return Lines;
+        } 
+       
+    }
+    int WriteFile(string name, string data){
+        ofstream File (name.c_str());
+        if (File.is_open())
+        {
+            File << data;
+           
+            File.close();
+            return 1;
+        }
+        else 
+        {    
+            cout << "Unable to open file";
+            return 0;
+        }
+        
+    }
 }
 namespace Maths {
     
@@ -51,4 +114,5 @@ namespace Maths {
     double Fabs(double x)                 { return fabs(x);            }
     double Floor(double x)                { return floor(x);           }
     double Fmod(double x, double y)       { return fmod(x,y);          }    
+    double deg2rad(double deg)            { return (deg * 3.14159265358979323846) / 180;   }
 }
