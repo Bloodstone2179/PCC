@@ -1,4 +1,5 @@
 import os,subprocess,time, termcolor,shutil, sys
+from BetterPrint import ErrorPrint, InfoPrint, WarnPrint,NotifyPrint
 def getResourcePath():
     """ Get absolute path to resource, works for dev and for PyInstaller """
     base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
@@ -224,9 +225,9 @@ class Compiler_PC_CPP(Compilebase):
         #termcolor.cprint("COMMAND: " + command, "magenta")
         CMD_ = subprocess.run(command, shell=True, stdout=subprocess.PIPE)
         if CMD_.stdout == b"":
-            termcolor.cprint("<-------------------- BUILT EXE -------------------->","blue")
-            print(f"TIME TO RUN {time.time() - s} seconds")
+            WarnPrint("<-------------------- BUILT EXE -------------------->")
+            NotifyPrint(f"TIME TO RUN {time.time() - s} seconds")
         else:
-            termcolor.cprint("<-------------------- FAILED TO BUILD EXE -------------------->","red")
-            print(CMD_.stdout)
+            ErrorPrint("<-------------------- FAILED TO BUILD EXE -------------------->")
+            ErrorPrint(CMD_.stdout)
         os.remove(f"{out_name_fe}.cpp")

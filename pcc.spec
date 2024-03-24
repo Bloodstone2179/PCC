@@ -5,7 +5,7 @@ a = Analysis(
     ['SRC\\main.py'],
     pathex=[],
     binaries=[],
-    datas=[('SRC/compiler.py', '.')],
+    datas=[('SRC/BetterPrint.py', '.'), ('SRC/compiler.py', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

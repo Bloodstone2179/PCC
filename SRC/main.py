@@ -1,6 +1,6 @@
 from compiler import Compiler_PC_CPP, FileImp
 import argparse, os, sys, json
-from Print import ErrorPrint, InfoPrint, WarnPrint
+from BetterPrint import ErrorPrint, InfoPrint, WarnPrint
 usage_c = "(Compiling ) "
 usage_g = "(Generation) "
 rootDir = os.getcwd()
@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser("HEHE")
 parser.add_argument("-g", "--gen", help=f"{usage_g}Generates a base project in the current working directory", type=bool, required=False, default=False, action=argparse.BooleanOptionalAction)
 parser.add_argument("-f", "--file", help=f"{usage_c}The Input file", type=str, required=False)
 parser.add_argument("-d", "--output_dir", help=f"{usage_c}dir of output files", type=str, required=False, default="output")
-parser.add_argument("-n", "--project_name", help=f"{usage_c}name of the project", type=str, required=False)
+parser.add_argument("-n", "--project_name", help=f"{usage_c}name of the project", type=str, required=False, default="Application")
 parser.add_argument("-r", "--run", help=f"{usage_c}run the exe straight away after its been built", type=bool, required=False, default=False, action=argparse.BooleanOptionalAction)
 includeFiles = ["builtins.h"]
 

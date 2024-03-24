@@ -1,6 +1,10 @@
 ('D:\\Docs\\Code\\Code-Projects\\AQA Pseudo Code Project\\AQA PseudoCode '
  'transpiler\\build\\pcc\\PYZ-00.pyz',
- [('__future__', 'D:\\Apps\\Python\\Lib\\__future__.py', 'PYMODULE'),
+ [('BetterPrint',
+   'D:\\Docs\\Code\\Code-Projects\\AQA Pseudo Code Project\\AQA PseudoCode '
+   'transpiler\\SRC\\BetterPrint.py',
+   'PYMODULE'),
+  ('__future__', 'D:\\Apps\\Python\\Lib\\__future__.py', 'PYMODULE'),
   ('_compat_pickle', 'D:\\Apps\\Python\\Lib\\_compat_pickle.py', 'PYMODULE'),
   ('_compression', 'D:\\Apps\\Python\\Lib\\_compression.py', 'PYMODULE'),
   ('_py_abc', 'D:\\Apps\\Python\\Lib\\_py_abc.py', 'PYMODULE'),
@@ -158,6 +162,9 @@
   ('tempfile', 'D:\\Apps\\Python\\Lib\\tempfile.py', 'PYMODULE'),
   ('termcolor',
    'D:\\Apps\\Python\\Lib\\site-packages\\termcolor\\__init__.py',
+   'PYMODULE'),
+  ('termcolor._types',
+   'D:\\Apps\\Python\\Lib\\site-packages\\termcolor\\_types.py',
    'PYMODULE'),
   ('termcolor.termcolor',
    'D:\\Apps\\Python\\Lib\\site-packages\\termcolor\\termcolor.py',

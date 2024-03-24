@@ -18,7 +18,8 @@
   <a target="code" href="///D:/Docs/Code/Code-Projects/AQA%20Pseudo%20Code%20Project/AQA%20PseudoCode%20transpiler/SRC/main.py" type="text/plain"><tt>main.py</tt></a>
 <span class="moduletype">Script</span>  <div class="import">
 imports:
-    <a href="#_collections_abc">_collections_abc</a>
+    <a href="#BetterPrint">BetterPrint</a>
+ &#8226;   <a href="#_collections_abc">_collections_abc</a>
  &#8226;   <a href="#_weakrefset">_weakrefset</a>
  &#8226;   <a href="#abc">abc</a>
  &#8226;   <a href="#argparse">argparse</a>
@@ -202,11 +203,29 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="BetterPrint"></a>
+  <a target="code" href="///D:/Docs/Code/Code-Projects/AQA%20Pseudo%20Code%20Project/AQA%20PseudoCode%20transpiler/SRC/BetterPrint.py" type="text/plain"><tt>BetterPrint</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#termcolor">termcolor</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#compiler">compiler</a>
+ &#8226;   <a href="#main.py">main.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="__future__"></a>
   <a target="code" href="///D:/Apps/Python/Lib/__future__.py" type="text/plain"><tt>__future__</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imported by:
     <a href="#termcolor">termcolor</a>
+ &#8226;   <a href="#termcolor._types">termcolor._types</a>
  &#8226;   <a href="#termcolor.termcolor">termcolor.termcolor</a>
 
   </div>
@@ -1463,7 +1482,8 @@ imported by:
   <a target="code" href="///D:/Docs/Code/Code-Projects/AQA%20Pseudo%20Code%20Project/AQA%20PseudoCode%20transpiler/SRC/compiler.py" type="text/plain"><tt>compiler</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#os">os</a>
+    <a href="#BetterPrint">BetterPrint</a>
+ &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#shutil">shutil</a>
  &#8226;   <a href="#subprocess">subprocess</a>
  &#8226;   <a href="#sys">sys</a>
@@ -4964,7 +4984,6 @@ imports:
  &#8226;   <a href="#importlib">importlib</a>
  &#8226;   <a href="#importlib._bootstrap">importlib._bootstrap</a>
  &#8226;   <a href="#importlib._bootstrap_external">importlib._bootstrap_external</a>
- &#8226;   <a href="#importlib.machinery">importlib.machinery</a>
  &#8226;   <a href="#sys">sys</a>
  &#8226;   <a href="#warnings">warnings</a>
 
@@ -5095,8 +5114,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#importlib">importlib</a>
- &#8226;   <a href="#importlib.abc">importlib.abc</a>
+    <a href="#importlib.abc">importlib.abc</a>
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#py_compile">py_compile</a>
 
@@ -5544,6 +5562,7 @@ imported by:
  &#8226;   <a href="#subprocess">subprocess</a>
  &#8226;   <a href="#tarfile">tarfile</a>
  &#8226;   <a href="#tempfile">tempfile</a>
+ &#8226;   <a href="#termcolor.termcolor">termcolor.termcolor</a>
  &#8226;   <a href="#tokenize">tokenize</a>
  &#8226;   <a href="#zipfile">zipfile</a>
  &#8226;   <a href="#zipfile._path">zipfile._path</a>
@@ -6874,8 +6893,28 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#compiler">compiler</a>
+    <a href="#BetterPrint">BetterPrint</a>
+ &#8226;   <a href="#compiler">compiler</a>
+ &#8226;   <a href="#termcolor._types">termcolor._types</a>
  &#8226;   <a href="#termcolor.termcolor">termcolor.termcolor</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="termcolor._types"></a>
+  <a target="code" href="///D:/Apps/Python/Lib/site-packages/termcolor/_types.py" type="text/plain"><tt>termcolor._types</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#__future__">__future__</a>
+ &#8226;   <a href="#termcolor">termcolor</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#termcolor.termcolor">termcolor.termcolor</a>
 
   </div>
 
@@ -6887,9 +6926,11 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#__future__">__future__</a>
+ &#8226;   <a href="#io">io</a>
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#sys">sys</a>
  &#8226;   <a href="#termcolor">termcolor</a>
+ &#8226;   <a href="#termcolor._types">termcolor._types</a>
  &#8226;   <a href="#typing">typing</a>
  &#8226;   <a href="#warnings">warnings</a>
 
@@ -7136,6 +7177,7 @@ imported by:
  &#8226;   <a href="#importlib.resources._common">importlib.resources._common</a>
  &#8226;   <a href="#importlib.resources._legacy">importlib.resources._legacy</a>
  &#8226;   <a href="#importlib.resources.abc">importlib.resources.abc</a>
+ &#8226;   <a href="#termcolor._types">termcolor._types</a>
  &#8226;   <a href="#termcolor.termcolor">termcolor.termcolor</a>
 
   </div>
